@@ -28,19 +28,6 @@
         return $dblink->TabResSQL($query);
     }
 
-	function formatDate($date){
-		$mois = array('janvier','février','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','decembre');
-		$res = $date[8] . $date[9] . ' ';
-		$num = '';
-		if ($date[5] != '0'){
-			$num .= $date[5];
-		}
-		$num .= $date[6];
-		$res .= $mois[$num-1];
-		$res .= ' ' . $date[0] . $date[1] . $date[2] . $date[3];
-		return $res;
-	}
-
 	function getBlock($file,$data = []){
 		require_once $file;
 	}
@@ -49,7 +36,7 @@
 
 	function getIntroFilm(){
         $dblink = new Mysql('mysql-deams.alwaysdata.net','deams_sitephp','deams','toto');
-        $query = "select f.id,titre,chemin from film f, film_has_photo fhp, photo p where f.id=fhp.id_film and fhp.id_photo=p.id and fhp.role='affiche' order by titre";
+        $query = "select * from film";
         return $res = $dblink->TabResSQL($query);
     }
 

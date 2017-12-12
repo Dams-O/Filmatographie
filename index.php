@@ -10,4 +10,4 @@
 
     getBlock('indexView.php',$data);
 
-    getBlock('end.php');
+    getBlock('footer.php');

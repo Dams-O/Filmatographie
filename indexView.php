@@ -1,5 +1,5 @@
 <body>
-    <h1 id="titreIndex">Filmathèque</h1>
+    <h1 id="titreIndex">Les Cartoons !!</h1>
     <section>
         <table id="id_filmogrphie">
             <?php
@@ -11,7 +11,7 @@
             }
             ?>
         </table>
-        <a href="#titreIndex"><img id="fleche" src="image/fleche.png"></a>
+        <a href="#titreIndex"><img id="fleche" src="img/fleche.png"></a>
     </section>
 
     <?php getBlock('footer.html'); ?>
