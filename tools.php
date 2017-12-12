@@ -13,7 +13,7 @@
                 return;
             }
         }
-        header('Location: http://http://deams.alwaysdata.net/');
+        header('Location: http://deams.alwaysdata.net/');
     }
 
     function getAllIds($table){

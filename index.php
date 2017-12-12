@@ -8,6 +8,6 @@
 
     getBlock('head.php',$data);
 
-    getBlock('contenu_index.php',$data);
+    getBlock('indexView.php',$data);
 
     getBlock('end.php');
