@@ -1,0 +1,133 @@
+		a{
+			color: #f7cac9;
+		}
+		
+		h1{
+			color: #92a8d1;
+		}
+		
+		h2{
+			color: #92a8d1;
+		}
+		
+		footer{
+			color: #f7cac9;
+		}
+		
+		p{
+			color: #EEEEEE;
+		}
+		
+		time{
+			color: #EEEEEE;
+		}
+		
+		figcaption{
+			color: #f7cac9;
+		}
+		
+		li{
+			color: #EEEEEE;
+		}
+		
+		article.right{
+			float:right;
+		}
+		
+		article.left{
+			float:left;
+		}
+		div.flex{
+			display:flex;
+		}
+		#droite{
+			flex:1;
+		}
+		
+		#gauche{
+			flex:1;
+		}
+		
+		#centre{
+			flex:1;
+		}
+		
+		
+		
+		@media screen and (min-width: 1201px) {
+			body{
+				width:1200px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	
+	
+		@media screen and (min-width: 801px) and (max-width: 1200px) {
+			body{
+				width:800px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+
+		@media screen and (min-width: 651px) and (max-width: 800px) {
+			body{
+				width:720px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+		
+		@media screen and (min-width: 501px) and (max-width: 650px) {
+			body{
+				width:600px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+
+		@media screen and (min-width: 421px) and (max-width: 500px) {
+			body{
+				width:480px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+		
+		@media screen and (min-width: 341px) and (max-width: 420px) {
+			body{
+				width:400px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	
+		@media screen and (max-width: 340px) {
+			body{
+				width:340px;
+				height:50px;
+				text-align:center;
+				background-image:url(../img/background.jpg);
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
