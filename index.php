@@ -3,7 +3,7 @@
     require_once('tools.php');
 
     $data = array();
-    $data['titrePage'] = 'Hugo Ciné';
+    $data['titrePage'] = 'Filmathèque Rabellino';
     $data['films'] = getIntroFilm();
 
     getBlock('head.php',$data);
