@@ -11,7 +11,7 @@ class MySQLExeption  extends Exception{
     }
 }
 
-class Mysql{
+class bdd{
     private
     $server = '',
     $data_base = '',
@@ -35,7 +35,7 @@ class Mysql{
             throw new MySQLExeption(' Erreur de connexion à la base de donnees!!! ');
     }
 
-    public function TabResSQL($query){
+    public function ResultSQL($query){
         $i = 0;
         $ressource = mysqli_query($this->link, $query);
         $tabResult=array();
