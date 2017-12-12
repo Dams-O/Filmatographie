@@ -4,8 +4,6 @@
 
 	require_once('bdd.php');
 
-	// Mysql($server = 'localhost', $date_base = 'base', $id = 'root', $password = '');
-
     function checkURL($id,$table){
         $listIds = getAllIds($table);
         foreach ($listIds as $real){
@@ -40,7 +38,7 @@
         return $res = $dblink->TabResSQL($query);
     }
 
-    // FILM.PHP
+    // FILM
 
 	function getFilm($id){
 		$dblink = new Mysql('mysql-deams.alwaysdata.net','deams_sitephp','deams','toto');

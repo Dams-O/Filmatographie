@@ -5,7 +5,7 @@
             <?php
             foreach($data['films'] as $film){
                 echo '<tr>' . "\n";
-                echo '<td><a href="http://deams.alwaysdata.net/info_film.php?id=' . $film['id'] . '"><img class="img_verticale" src="' . $film['chemin'] . '"></a></td>';
+                echo '<td><a href="http://deams.alwaysdata.net/info_film.php?id=' . $film['id'] . '"><img src="' . $film['chemin'] . '"></a></td>';
                 echo '<td><a href="http://deams.alwaysdata.net/info_film.php?id=' . $film['id'] . '">' . $film['titre'] . '</a></td>' . "\n";
                 echo '</tr>' . "\n";
             }
