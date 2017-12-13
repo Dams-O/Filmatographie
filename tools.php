@@ -3,20 +3,6 @@
 	ini_set('display_errors', 'on');
 
 	require_once('bdd.php');
-
-	function ResultSQL($query){
-        $i = 0;
-        $ressource = mysqli_query($this->link, $query);
-        $tabResult=array();
-        if (!$ressource and $this->debogue) throw new MySQLExeption(' Erreur de requête SQL!!! ');
-        while ($rows = mysqli_fetch_assoc($ressource)){
-            foreach ($rows as $keys => $values) $tabResult[$i][$keys] = $values;
-            ++$i;
-        }
-        mysqli_free_result($ressource);
-        $this->nb_query++;
-        return $tabResult;
-	}
 	
     function checkURL($id,$table){
         $listIds = getAllIds($table);
@@ -31,28 +17,28 @@
     function getAllIds($table){
         $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
         $query = "select id from " . $table;
-        return $dblink->TabResSQL($query);
+        return $dblink->ResultSQL($query);
     }
 
     function getAllName($table){
         $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
         $query = "select nom from " . $table;
-        return $dblink->TabResSQL($query);
+        return $dblink->ResultSQL($query);
     }
 
 	function getBlock($file,$data = []){
 		require_once $file;
 	}
 
-	// INDEX
+	// film dans l'index
 
 	function getIndexFilm(){
-        $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
+        $dblink = new bdd('mysql-deams.alwaysdata.net','deams_sitephp','deams','toto');
         $query = "SELECT * FROM film WHERE id=1";
         return $res = $dblink->ResultSQL($query);
     }
 
-    // FILM
+    // Film sélectionné
 
 	function getFilm($id){
 		$dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
@@ -61,32 +47,24 @@
 		$res[0]['dateSortie'] = formatDate($res[0]['dateSortie']);
 		$res[0]['notation'] = number_format($res[0]['notation'],1);
 		return $res[0];
-	}
+    }
+    
+    // Récupére le chemin de la photo du film (Film has photo)
 
     function getPhotoFilm($id){
         $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
         $query = "select chemin, legende, role from photo p, film_has_photo f where p.id=f.id_photo and f.id_film=$id order by role";
-        return $dblink->TabResSQL($query);
+        return $dblink->ResultSQL($query);
     }
 
-    function getParticipant($role,$idFilm){
-        $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
-        $query = "select prenom, nom, chemin, legende from personne p, film_has_personne fhp, personne_has_photo php, photo ph where p.id=fhp.id_personne and p.id=php.id_personne and php.id_photo=ph.id and role ='$role' and id_film=$idFilm order by prenom";
-        return $dblink->TabResSQL($query);
-    }
+    // Récupére les informations de la personne sélectionné
 
 	function getPerson($nom){
 		$dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
 		$query = "select prenom, nom, dateNaissance, biographie, chemin from personne pr, personne_has_photo php, photo p where pr.id=php.id_personne and php.id_photo=p.id and nom='$nom'";
-		$res = $dblink->TabResSQL($query);
+		$res = $dblink->ResultSQL($query);
 		for ($i = 0; $i < count($res); ++$i) {
 			$res[$i]['dateNaissance'] = formatDate($res[$i]['dateNaissance']);
 		}
 		return $res;
 	}
-
-	function getFilmographie($nom){
-        $dblink = mysqli_connect('mysql-deams.alwaysdata.net','deams','toto');
-        $query = "select f.id, chemin, titre from photo p, film_has_photo fhp, film f, film_has_personne fhr, personne pr where pr.id=fhr.id_personne and fhr.id_film=f.id and f.id=fhp.id_film and fhp.id_photo=p.id and pr.nom='$nom' and fhp.role='affiche' order by titre";
-        return $dblink->TabResSQL($query);
-    }
