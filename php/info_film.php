@@ -11,7 +11,7 @@
                           $info = $data['infoRealisateur']; 
                           echo $info['prenom'] . ' ' . $info['nom'];
                         ?></li>
-  		<li>Acteurs principaux : 
+  		<li>Personnage principaux : 
   			<ol>
   				<?php
             $tab = $data['infoActeur'];
@@ -61,123 +61,123 @@
     ?>
         <a href="#header"><img id="fleche" src="image/fleche.png"></a>
 
-        <h2>La foire aux questions !</h2>
+        <h2>Des questions ?</h2>
         <dl id="faq">
             <dl>
-                <dt>Question 1</dt>
+                <dt>1. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 2</dt>
+                <dt>2. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 3</dt>
+                <dt>3. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 4</dt>
+                <dt>4. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 5</dt>
+                <dt>5. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 6</dt>
+                <dt>6. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 7</dt>
+                <dt>7. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 8</dt>
+                <dt>8. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 9</dt>
+                <dt>9. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
             </dl>
 
             <dl>
-                <dt>Question 10</dt>
+                <dt>10. Question</dt>
                 <dd>
                     <dl>
-                        <dt>réponse 1 partie 1</dt>
+                        <dt>- réponse 1</dt>
                         <dd>détail 1</dd>
-                        <dt>réponse 1 partie 2</dt>
+                        <dt>- réponse 2</dt>
                         <dd>détail 2</dd>
                     </dl>
                 </dd>
@@ -186,5 +186,5 @@
         </dl>
 	</section>
 
-  <?php getBlock('footer.html'); ?>
+  <?php getBlock('footer.php'); ?>
 </body>

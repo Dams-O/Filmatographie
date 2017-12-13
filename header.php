@@ -3,7 +3,6 @@
 	<label>Damien Rabellino</label>
 	<a href="realisateur.php">Réalisateur</a>
 	<a href="Actor.php">Acteurs</a>
-    <button id="hideAside">hideAside</button>
-    <button id="fadeImg">fadeImg</button>
-    <button id="toggleMenu">toggleMenu</button>
+    <button id="hideAside">Cacher</button>
+    <button id="toggleMenu">Menu</button>
 </header>
